@@ -1,0 +1,71 @@
+.header {
+  background-color: #97614b;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  /* Для наглядности */
+}
+
+a {
+  color: #d1c237;
+  /* Синий цвет */
+  text-decoration: none;
+  /* Убираем подчеркивание */
+  font-weight: 500;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  /* Прозрачная граница для анимации */
+  transition: all 0.3s ease;
+}
+
+h1.address {
+  font-size: 2.5rem;
+  /* Размер шрифта */
+  color: #7c6363;
+  /* Цвет текста */
+  font-weight: 600;
+  /* Жирность */
+  margin: 0;
+
+}
+
+.horizontal-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  flex-wrap: wrap;
+  font-size: small;
+  background-color: #7e6161cc;
+  border-radius: 5px;
+  border-color: #525151cc;
+  /* Для адаптивности */
+}
+
+/* Стили элементов списка */
+.horizontal-list li {
+  display: flex;
+  align-items: center;
+  background-color: #c4b7b7cc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Стили для дней недели */
+.day {
+  font-weight: 600;
+  color: #747272cc;
+  margin-right: 8px;
+}
+
+/* Стили для времени работы */
+.hours {
+  color: #525151cc;
+  font-size: 0.95em;
+}
