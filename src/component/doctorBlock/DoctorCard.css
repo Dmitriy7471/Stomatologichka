@@ -1,6 +1,6 @@
 /* Основные стили */
 .doctor-card {
-  width: 240px;
+  width: 280px;
   background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
@@ -9,11 +9,11 @@
   margin: 15px;
 }
 
-/* Видео-контейнер */
+/* Видео контейнер */
 .video-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 420px;
   background: #000;
   cursor: pointer;
 }
@@ -22,44 +22,45 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
-/* Элементы управления видео */
-.video-controls {
+/* Стили для превью */
+.video-preview {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
-.video-controls.playing {
-  opacity: 0;
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
 }
 
-.video-container:hover .video-controls {
-  opacity: 1;
-}
-
-.play-icon {
-  width: 60px;
-  height: 60px;
-  background: rgba(45, 156, 219, 0.9);
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(45, 156, 219, 0.8);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
-.play-icon svg {
-  width: 28px;
-  height: 28px;
-  fill: white;
+.video-container:hover .play-button-overlay {
+  background: rgba(45, 156, 219, 1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* Информация о враче */
@@ -83,36 +84,4 @@
   color: #2d9cdb;
   text-align: center;
   font-weight: 500;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .doctor-card {
-    width: 220px;
-  }
-  
-  .video-container {
-    height: 380px;
-  }
-}
-
-@media (max-width: 480px) {
-  .doctor-card {
-    width: 280px;
-  }
-  
-  .doctor-info {
-    padding: 15px;
-  }
-}
-.video-controls {
-  transition: opacity 0.2s ease, background-color 0.2s ease;
-}
-
-.play-icon {
-  transition: transform 0.2s ease;
-}
-
-.video-container:hover .play-icon {
-  transform: scale(1.1);
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Doctor, SpecializationFilter } from '../../types';
 import { DoctorsList } from './DoctorsList';
-
+import './DoctorsTeamSection.css';
 interface DoctorsTeamSectionProps {
   doctors: Doctor[];
 }
@@ -20,22 +20,52 @@ export const DoctorsTeamSection = ({ doctors }: DoctorsTeamSectionProps) => {
         
         <div className="specialization-filters">
           <button 
-            className={filter === 'все' ? 'active' : ''}
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
             onClick={() => setFilter('все')}
           >
             Все врачи
           </button>
           <button 
-            className={filter === 'терапевт' ? 'active' : ''}
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
             onClick={() => setFilter('терапевт')}
           >
             Терапевты
           </button>
           <button 
-            className={filter === 'хирург' ? 'active' : ''}
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
             onClick={() => setFilter('хирург')}
           >
             Хирурги
+          </button>
+          <button 
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
+            onClick={() => setFilter('ортодонт')}
+          >
+            Ортодонты
+          </button>
+          <button 
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
+            onClick={() => setFilter('педиатр')}
+          >
+            Педиаторы
+          </button>
+          <button 
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
+            onClick={() => setFilter('Гигиенист')}
+          >
+            Гигиенисты
+          </button>
+          <button 
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
+            onClick={() => setFilter('Детский стоматолог')}
+          >
+            Детские стоматологи
+          </button>
+          <button 
+            className={`filter-item ${filter === 'все' ? 'active' : ''}`}
+            onClick={() => setFilter('Анастезиолог')}
+          >
+            Анастезиологи
           </button>
           {/* Добавьте другие кнопки по аналогии */}
         </div>

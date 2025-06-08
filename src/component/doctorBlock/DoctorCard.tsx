@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Doctor } from '../../types';
 import './DoctorCard.css';
 
@@ -14,13 +14,16 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
   setCurrentlyPlaying 
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [showPreview, setShowPreview] = useState(true);
 
   useEffect(() => {
     if (videoRef.current) {
       if (currentlyPlaying === doctor.id) {
         videoRef.current.play();
+        setShowPreview(false);
       } else {
         videoRef.current.pause();
+        setShowPreview(true);
       }
     }
   }, [currentlyPlaying, doctor.id]);
@@ -34,22 +37,31 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
   };
 
   return (
-    <div className="doctor-card" key={doctor.id}>
+    <div className="doctor-card">
       <div className="video-container" onClick={togglePlay}>
+        {/* Видео с превью */}
         <video
           ref={videoRef}
           src={`/data/videos/${doctor.videoFileName}`}
           loop
           playsInline
           className="doctor-video"
-          poster="/images/doctor-poster.jpg"
+          poster={`/data/videos/previews/${doctor.videoFileName.replace('.mp4', '.jpg')}`}
         />
         
-        <div className={`video-controls ${currentlyPlaying === doctor.id ? 'playing' : ''}`}>
-          <div className="play-icon">
-            {currentlyPlaying === doctor.id ? <PauseIcon /> : <PlayIcon />}
+        {/* Всегда видимое превью */}
+        {showPreview && (
+          <div className="video-preview">
+            <img
+              src={`/data/videos/previews/${doctor.videoFileName.replace('.mp4', '.jpg')}`}
+              alt={`Превью ${doctor.name}`}
+              className="preview-image"
+            />
+            <div className="play-button-overlay">
+              <PlayIcon />
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <div className="doctor-info">
@@ -63,13 +75,7 @@ export const DoctorCard: React.FC<DoctorCardProps> = ({
 };
 
 const PlayIcon = () => (
-  <svg viewBox="0 0 24 24">
+  <svg viewBox="0 0 24 24" width="48" height="48">
     <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
-  </svg>
-);
-
-const PauseIcon = () => (
-  <svg viewBox="0 0 24 24">
-    <path fill="currentColor" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
   </svg>
 );

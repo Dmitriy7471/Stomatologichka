@@ -21,43 +21,43 @@ export const doctorsData: Doctor[] = [
   },
   {
     id: '4',
-    name: 'Сафронова Виктория',
+    name: 'Далматинов Сергей',
     specialization: 'педиатр',
     videoFileName: 'doctor1.mp4'
   },
    {
     id: '5',
-    name: 'Сафронова Виктория',
+    name: 'Конин Владимир',
     specialization: 'Гигиенист',
     videoFileName: 'doctor1.mp4'
   },
   {
     id: '6',
-    name: 'Сафронова Виктория',
+    name: 'Реактова Евгения',
     specialization: 'Детский стоматолог',
     videoFileName: 'doctor1.mp4'
   },
   {
     id: '7',
-    name: 'Сафронова Виктория',
+    name: 'Бизнесова Мария',
     specialization: 'Анастезиолог',
     videoFileName: 'doctor1.mp4'
   },
    {
     id: '8',
-    name: 'Сафронова Виктория',
+    name: 'Тротилов Виктор',
     specialization: 'Анастезиолог',
     videoFileName: 'doctor1.mp4'
   },
   {
     id: '9',
-    name: 'Сафронова Виктория',
+    name: 'Лучев Георгий',
     specialization: 'ортодонт',
     videoFileName: 'doctor1.mp4'
   },
   {
     id: '10',
-    name: 'Сафронова Виктория',
+    name: 'Майсурадзе Гагуа',
     specialization: 'педиатр',
     videoFileName: 'doctor1.mp4'
   },
