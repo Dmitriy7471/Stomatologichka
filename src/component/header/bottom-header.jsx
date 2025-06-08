@@ -7,8 +7,8 @@ const BottomHeader = () => {
       {/* Левая часть с логотипом */}
       <div className="logo">
         <img 
-          src="https://via.placeholder.com/150x40?text=Company+Logo" 
           alt="Логотип компании" 
+          src='https://www.shutterstock.com/image-vector/blue-tooth-logo-icon-line-260nw-2196367425.jpg'
         />
       </div>
       

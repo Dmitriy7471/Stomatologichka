@@ -1,0 +1,65 @@
+/* Тёмный фон секции */
+.doctors-dark-section {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 60px 0;
+  margin: 40px 0;
+  border-radius: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #2d9cdb;
+  margin: 15px auto 0;
+}
+
+/* Стили для фильтров */
+.specialization-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.specialization-filters button {
+  padding: 10px 20px;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #2d9cdb;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.specialization-filters button:hover,
+.specialization-filters button.active {
+  background: #2d9cdb;
+  color: #121212;
+}
+
+/* Стили для сетки карточек */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}

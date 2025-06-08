@@ -1,0 +1,118 @@
+/* Основные стили */
+.doctor-card {
+  width: 240px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  margin: 15px;
+}
+
+/* Видео-контейнер */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #000;
+  cursor: pointer;
+}
+
+.doctor-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Элементы управления видео */
+.video-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.video-controls.playing {
+  opacity: 0;
+}
+
+.video-container:hover .video-controls {
+  opacity: 1;
+}
+
+.play-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(45, 156, 219, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+/* Информация о враче */
+.doctor-info {
+  padding: 20px;
+  background: #2a2a2a;
+  color: white;
+}
+
+.doctor-name {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.doctor-specialization {
+  margin: 0;
+  font-size: 1rem;
+  color: #2d9cdb;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .doctor-card {
+    width: 220px;
+  }
+  
+  .video-container {
+    height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-card {
+    width: 280px;
+  }
+  
+  .doctor-info {
+    padding: 15px;
+  }
+}
+.video-controls {
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.play-icon {
+  transition: transform 0.2s ease;
+}
+
+.video-container:hover .play-icon {
+  transform: scale(1.1);
+}
