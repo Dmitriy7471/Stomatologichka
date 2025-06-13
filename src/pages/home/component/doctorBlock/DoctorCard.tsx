@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Doctor } from '../../types';
+import { Doctor } from '../../../../types';
 import './DoctorCard.css';
 
 interface DoctorCardProps {

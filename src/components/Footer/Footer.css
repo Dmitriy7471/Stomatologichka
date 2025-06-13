@@ -1,0 +1,100 @@
+.footer-container {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-logo-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.footer-copyright {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer-links-column {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-links-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 12px;
+}
+
+.footer-links-list a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 15px;
+}
+
+.footer-links-list a:hover {
+  color: #ffffff;
+}
+
+.footer-cta-column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.footer-appointment-btn {
+  background-color: #2d9cdb;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-appointment-btn:hover {
+  background-color: #1e88c7;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-cta-column {
+    justify-content: flex-start;
+  }
+}

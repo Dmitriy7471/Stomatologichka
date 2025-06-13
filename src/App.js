@@ -1,16 +1,12 @@
-import Header from './component/header/header';
-import BottomHeader from './component/header/bottom-header';
-import Background from './component/Background/Background';
-import { DoctorsTeamSection } from './component/doctorBlock/DoctorsTeamSection';
-import { doctorsData } from './data/doctors';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import  Home  from './pages/home/Home';
+
+
 function App() {
   
   return (
     <>
-      <Header/>
-      <BottomHeader/>
-      <Background/>
-      <DoctorsTeamSection doctors={doctorsData} />
+      <Home/>
     </>
   );
 }

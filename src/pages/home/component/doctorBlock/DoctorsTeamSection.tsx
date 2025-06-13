@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Doctor, SpecializationFilter } from '../../types';
+import { Doctor, SpecializationFilter } from '../../../../types';
 import { DoctorsList } from './DoctorsList';
 import './DoctorsTeamSection.css';
+
 interface DoctorsTeamSectionProps {
   doctors: Doctor[];
 }
@@ -72,6 +73,7 @@ export const DoctorsTeamSection = ({ doctors }: DoctorsTeamSectionProps) => {
 
         <DoctorsList doctors={filteredDoctors} />
       </div>
+     
     </section>
   );
 };

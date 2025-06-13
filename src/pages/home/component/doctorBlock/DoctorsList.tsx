@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Doctor } from '../../types';
+import { Doctor } from '../../../../types';
 import { DoctorCard } from './DoctorCard';
 import './DoctorsList.css';
 
