@@ -11,7 +11,6 @@ const Home: React.FC = () => {
   return (
     <PageLayout>
         
-      <BottomHeader/>
       <Background/>
       <DoctorsTeamSection doctors={doctorsData} />
       <AppointmentForm/>
