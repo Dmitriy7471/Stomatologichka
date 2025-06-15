@@ -1,0 +1,144 @@
+/* Стили модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* Остальные стили */
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  text-align: center;
+}
+
+.service-info {
+  background-color: #f8f9fa;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.service-info span {
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.submit-button {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #3182ce;
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: #718096;
+  margin: 0;
+  text-align: center;
+}
